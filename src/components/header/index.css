@@ -1,0 +1,17 @@
+.Header {
+  height: 60px;
+}
+
+.header-list {
+  display: flex;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+.header-list img {
+  height: 35px;
+  width: 35px;
+}
