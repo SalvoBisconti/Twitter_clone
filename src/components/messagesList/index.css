@@ -1,3 +1,31 @@
 .MessagesList {
   height: 100%;
+  width: 100vw;
+}
+
+.new-post {
+  position: fixed;
+  bottom: 12%;
+  right: 2%;
+  height: 60px;
+  width: 60px;
+  background-color: rgb(29, 161, 242);
+  border-radius: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.newpost-img {
+  height: 35px;
+  width: 35px;
+}
+@media screen and (min-width: 800px) {
+  .MessagesList {
+    width: 45vw;
+  }
+  .new-post {
+    display: none;
+  }
 }

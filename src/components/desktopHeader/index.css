@@ -1,0 +1,43 @@
+.DesktopHeader {
+  display: none;
+  flex-direction: column;
+  margin-bottom: 50px;
+  padding: 0 20px;
+}
+
+.title-sec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-sec img {
+  width: 30px;
+  height: 30px;
+}
+.search-sec {
+  display: flex;
+  gap: 5px;
+}
+.user-search-area {
+  height: 45px;
+  width: 45px;
+}
+.search-area {
+  width: 60%;
+  height: 30px;
+  border-radius: 24px;
+  background-color: rgb(225 232 237);
+  border: none;
+  padding: 0 10px;
+  outline: none;
+}
+.search-sec img {
+  width: 25px;
+  height: 25px;
+}
+@media screen and (min-width: 800px) {
+  .DesktopHeader {
+    display: flex;
+  }
+}

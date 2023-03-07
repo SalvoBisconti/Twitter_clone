@@ -16,3 +16,9 @@
   width: 35px;
   cursor: pointer;
 }
+
+@media screen and (min-width: 800px) {
+  .Header {
+    display: none;
+  }
+}

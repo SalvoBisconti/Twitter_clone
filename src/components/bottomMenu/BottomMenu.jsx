@@ -22,7 +22,7 @@ const BottomMenu = () => {
         <li>
           <img
             src="https://img.icons8.com/ios/512/filled-message.png"
-            alt="mail"
+            alt="messages"
           />
         </li>
       </ul>
