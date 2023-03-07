@@ -1,24 +1,19 @@
 import "./index.css";
-// import { useState } from "react";
+import { AiOutlineTwitter, AiOutlineMenu } from "react-icons/ai";
+import { HiOutlineSparkles } from "react-icons/hi";
 
 const Header = ({ setIsActive }) => {
-  // const [isActive, setIsActive] = useState(false);
-
   return (
     <div className="Header">
       <ul className="header-list">
         <li>
-          <img
-            src="../../../public/hamburger.png"
-            alt="menu"
-            onClick={() => setIsActive((prev) => !prev)}
-          />
+          <AiOutlineMenu onClick={() => setIsActive((prev) => !prev)} />
         </li>
         <li>
-          <img src="../../../public/logo.png" alt="log" />
+          <AiOutlineTwitter />
         </li>
         <li>
-          <img src="../../../public/sparkling.png" alt="stars" />
+          <HiOutlineSparkles />
         </li>
       </ul>
     </div>

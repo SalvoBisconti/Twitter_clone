@@ -2,15 +2,16 @@
   display: none;
   flex-direction: column;
   align-items: start;
-  border-right: 1px solid rgba(142, 141, 141, 0.613);
+  border-right: 1px solid rgb(207, 207, 207);
   width: 25%;
   font-weight: bold;
   font-size: 0.9rem;
 }
 
 .logo-sidemenu {
-  height: 60px !important;
-  width: 60px !important;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: rgb(29, 161, 242);
 }
 .sidemenu-list {
   padding: 0 30px;
@@ -22,11 +23,10 @@
   align-items: center;
   gap: 15px;
   cursor: pointer;
+  font-size: 1.3rem;
 }
-
-.sidemenu-list img {
-  width: 25px;
-  height: 25px;
+.sidemenu-list li p {
+  font-size: 1rem;
 }
 
 .sidemenu-btn {

@@ -1,6 +1,7 @@
 import "./index.css";
 import MessageItem from "../messageItem";
 import messageList from "../../mocks/messageList";
+import { GiFeather } from "react-icons/gi";
 
 const MessagesList = () => {
   return (
@@ -9,11 +10,7 @@ const MessagesList = () => {
         <MessageItem msgData={msg} key={msg.id} />
       ))}
       <div className="new-post">
-        <img
-          src="../../../public/feather.png"
-          alt="new post"
-          className="newpost-img"
-        />
+        <GiFeather className="newpost-img" />
       </div>
     </div>
   );

@@ -1,0 +1,18 @@
+.TrendItem {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgb(207, 207, 207);
+}
+
+.TrendItem p,
+h4 {
+  margin: 0;
+}
+
+.TrendItem p {
+  margin: 0;
+  font-style: italic;
+  color: grey;
+}

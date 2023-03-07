@@ -1,0 +1,14 @@
+.SearchEl {
+  width: 100%;
+  flex-grow: 1;
+}
+
+.search-area {
+  width: 90%;
+  height: 30px;
+  border-radius: 24px;
+  background-color: rgb(225 232 237);
+  border: none;
+  padding: 0 10px;
+  outline: none;
+}

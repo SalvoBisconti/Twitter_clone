@@ -2,9 +2,11 @@
   height: 100vh;
   position: fixed;
   top: 0;
-  opacity: 0;
-  pointer-events: none;
+  left: -600px;
+  /* opacity: 0; */
+  /* pointer-events: none; */
   display: flex;
+  transition: all 0.45s ease;
 }
 .hamburger-area {
   height: 100%;
@@ -12,7 +14,7 @@
   background-color: white;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid rgba(128, 128, 128, 0.3);
+  border-right: 1px solid 1px solid rgb(207, 207, 207);
 }
 
 .user-info {
@@ -41,26 +43,31 @@
   padding: 0 20px;
   gap: 8px;
   cursor: pointer;
+  font-size: 1.5rem;
 }
 
-.HamburgerMenu-list img {
-  width: 30px;
-}
 .HamburgerMenu-list li {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
   font-weight: 600;
 }
-
+.HamburgerMenu-list li:hover {
+  color: rgb(29, 161, 242);
+}
+.twitter-blue {
+  color: rgb(29, 161, 242);
+}
+.HamburgerMenu-list span {
+  font-size: 1rem;
+}
 .modal {
   height: 100vh;
   width: 45vw;
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: transparent;
 }
 .show {
-  opacity: 1;
-  pointer-events: all;
+  left: 0px;
 }
 
 @media screen and (min-width: 800px) {

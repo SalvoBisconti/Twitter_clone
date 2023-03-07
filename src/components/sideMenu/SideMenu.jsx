@@ -1,70 +1,45 @@
 import "./index.css";
-
+import { AiTwotoneHome, AiOutlineBell, AiOutlineMail } from "react-icons/ai";
+import { BsBookmark, BsCardList, BsHash, BsTwitter } from "react-icons/bs";
+import { CiCircleMore } from "react-icons/ci";
+import { CgProfile } from "react-icons/cg";
 const SideMenu = () => {
   return (
     <div className="SideMenu">
       <ul className="sidemenu-list">
         <li>
-          <img
-            src="https://img.icons8.com/color/256/twitter--v1.png"
-            alt="logo"
-            className="logo-sidemenu"
-          />
+          <BsTwitter className="logo-sidemenu" />
         </li>
         <li>
-          <img
-            src="https://img.icons8.com/windows/512/home-page.png"
-            alt="home"
-          />
+          <AiTwotoneHome />
           <p>Home</p>
         </li>
         <li>
-          <img
-            src="https://img.icons8.com/fluency-systems-regular/512/hashtag-large.png"
-            alt="explore"
-          />
+          <BsHash />
           <p>Explore</p>
         </li>
         <li>
-          <img
-            src="https://img.icons8.com/ios/512/appointment-reminders.png"
-            alt="notifications"
-          />
+          <AiOutlineBell />
           <p>Notifications</p>
         </li>
         <li>
-          <img
-            src="https://img.icons8.com/ios/512/filled-message.png"
-            alt="messages"
-          />
+          <AiOutlineMail />
           <p>Messages</p>
         </li>
         <li>
-          <img
-            src="https://img.icons8.com/material/256/bookmark-outline.png"
-            alt="bookmarks"
-          />
+          <BsBookmark />
           <p>Bookmarks</p>
         </li>
         <li>
-          <img
-            src="https://img.icons8.com/material-outlined/512/ingredients-list.png"
-            alt="lists"
-          />
+          <BsCardList />
           <p>Lists</p>
         </li>
         <li>
-          <img
-            src="https://img.icons8.com/color/512/user-female-circle.png"
-            alt="profile"
-          />
+          <CgProfile />
           <p>Profile</p>
         </li>
         <li>
-          <img
-            src="https://img.icons8.com/ios/512/connection-status-off.png"
-            alt="more"
-          />
+          <CiCircleMore />
           <p>More</p>
         </li>
       </ul>

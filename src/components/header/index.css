@@ -11,10 +11,10 @@
   margin: 0;
 }
 
-.header-list img {
-  height: 35px;
-  width: 35px;
+.header-list {
+  font-size: 1.9rem;
   cursor: pointer;
+  color: rgb(29, 161, 242);
 }
 
 @media screen and (min-width: 800px) {

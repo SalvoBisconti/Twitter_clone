@@ -1,26 +1,31 @@
+import SearchEl from "../searchEl";
+
 import "./index.css";
+import { HiOutlineSparkles } from "react-icons/hi";
+import { BsCardImage, BsBarChartLine } from "react-icons/bs";
+import { AiOutlineFileGif } from "react-icons/ai";
 
 const DesktopHeader = () => {
   return (
     <div className="DesktopHeader">
       <div className="title-sec">
         <h3> Home</h3>
-        <img src="../../../public/sparkling.png" alt="sparkling" />
+        <HiOutlineSparkles className="sparkling" />
       </div>
       <div className="search-sec">
+        {/* <div className="input-area"> */}
         <img
           src="https://img.icons8.com/color/512/user-female-circle.png"
           alt="user"
           className="user-search-area"
         />
-        <input
-          type="text"
-          placeholder="What's happening?"
-          className="search-area"
-        />
-        <img src="../../../public/img-icon.png" alt="upload img" />
-        <img src="../../../public/gif-icon.png" alt="upload gif" />
-        <img src="../../../public/stats-icon.png" alt="upload stats" />
+        <SearchEl text="What's happening?" />
+        {/* </div> */}
+        <div className="icons">
+          <BsCardImage />
+          <AiOutlineFileGif />
+          <BsBarChartLine className="chart-icon" />
+        </div>
       </div>
     </div>
   );

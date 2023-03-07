@@ -1,0 +1,38 @@
+.TrendList {
+  width: 30vw;
+  margin-left: 3%;
+  margin-right: 7%;
+  margin-top: 10px;
+  display: none;
+}
+
+.trending-main {
+  border-radius: 24px;
+  background-color: #f6f8fa;
+  padding: 0px 8px;
+}
+.trending-header {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5px;
+  border-bottom: 1px solid rgb(207, 207, 207);
+  color: rgb(29, 161, 242);
+  font-size: 1.2rem;
+}
+.trending-title {
+  color: black;
+  font-size: 1rem;
+  margin: 0;
+}
+.showmore-text {
+  margin: 0;
+  padding: 10px;
+  color: rgb(29, 161, 242);
+}
+@media screen and (min-width: 800px) {
+  .TrendList {
+    display: block;
+  }
+}

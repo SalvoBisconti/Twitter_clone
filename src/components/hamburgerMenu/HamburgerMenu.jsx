@@ -1,5 +1,12 @@
-import "./index.css";
 import messageList from "../../mocks/messageList";
+import {
+  AiOutlineUser,
+  AiFillTwitterCircle,
+  AiOutlineComment,
+  AiOutlineUserAdd,
+} from "react-icons/ai";
+import { BsBookmark, BsCardList } from "react-icons/bs";
+import "./index.css";
 
 const HamburgerMenu = ({ isActive, setIsActive }) => {
   return (
@@ -16,45 +23,27 @@ const HamburgerMenu = ({ isActive, setIsActive }) => {
         </div>
         <ul className="HamburgerMenu-list">
           <li>
-            <img
-              src="https://img.icons8.com/material-outlined/512/user.png"
-              alt="user"
-            />
+            <AiOutlineUser />
             <span> Profile</span>
           </li>
           <li>
-            <img
-              src="https://img.icons8.com/fluency/512/twitter-circled.png"
-              alt="twitter blue"
-            />
+            <AiFillTwitterCircle className="twitter-blue" />
             <span> Twitter Blue</span>
           </li>
           <li>
-            <img
-              src="https://img.icons8.com/fluency-systems-regular/512/comments.png"
-              alt="comments"
-            />
+            <AiOutlineComment />
             <span> Argoments</span>
           </li>
           <li>
-            <img
-              src="https://img.icons8.com/material/256/bookmark-outline.png"
-              alt="bookmark"
-            />
+            <BsBookmark />
             <span> Bookmarks</span>
           </li>
           <li>
-            <img
-              src="https://img.icons8.com/material-outlined/512/ingredients-list.png"
-              alt="list"
-            />
+            <BsCardList />
             <span> Lists</span>
           </li>
           <li>
-            <img
-              src="https://img.icons8.com/pulsar-color/512/user-male-circle.png"
-              alt="twitter circle"
-            />
+            <AiOutlineUserAdd />
             <span> Twitter Circle</span>
           </li>
         </ul>
