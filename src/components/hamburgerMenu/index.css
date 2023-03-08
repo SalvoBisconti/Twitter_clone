@@ -5,6 +5,7 @@
   left: -600px;
   display: flex;
   transition: all 0.45s ease;
+  z-index: 10;
 }
 .hamburger-area {
   height: 100%;
