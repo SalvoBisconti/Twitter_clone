@@ -1,0 +1,17 @@
+.SubHeader {
+  height: 50px;
+  width: 100vw;
+  display: flex;
+  position: sticky;
+  top: 0;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid rgba(142, 141, 141, 0.613);
+  background-color: white;
+}
+
+@media screen and (min-width: 800px) {
+  .SubHeader {
+    display: none;
+  }
+}

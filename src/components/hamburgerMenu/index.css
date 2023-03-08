@@ -3,23 +3,30 @@
   position: fixed;
   top: 0;
   left: -600px;
-  /* opacity: 0; */
-  /* pointer-events: none; */
   display: flex;
   transition: all 0.45s ease;
 }
 .hamburger-area {
   height: 100%;
-  width: 55vw;
+  width: 70vw;
+  padding-top: 20px;
   background-color: white;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid 1px solid rgb(207, 207, 207);
+  border-right: 0.5px solid rgb(207, 207, 207);
+}
+.img-user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
+.add-icon {
+  font-size: 1.5rem;
+}
 .user-info {
   height: 150px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,8 +37,14 @@
   padding: 3px;
 }
 .user-img {
-  width: 50px;
+  width: 55px;
   border-radius: 100%;
+  background-image: url("https://i.pinimg.com/originals/7b/db/75/7bdb758f3927bc393ff2b2b72d4f4f6d.jpg");
+  background-size: cover;
+}
+.followers-count {
+  display: flex;
+  gap: 7px;
 }
 
 .HamburgerMenu-list {

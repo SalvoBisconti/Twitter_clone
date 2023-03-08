@@ -1,4 +1,3 @@
-import messageList from "../../mocks/messageList";
 import {
   AiOutlineUser,
   AiFillTwitterCircle,
@@ -6,20 +5,33 @@ import {
   AiOutlineUserAdd,
 } from "react-icons/ai";
 import { BsBookmark, BsCardList } from "react-icons/bs";
+import { BiUserPlus } from "react-icons/bi";
+
+import { useState, useEffect } from "react";
 import "./index.css";
 
 const HamburgerMenu = ({ isActive, setIsActive }) => {
+  const [userData, setUserData] = useState([]);
+  useEffect(() => {
+    fetch(`https://dummyjson.com/users/1`)
+      .then((res) => res.json())
+      .then((data) => setUserData(data));
+  }, []);
+
   return (
     <div className={`HamburgerMenu ${isActive ? "show" : ""}`}>
       <div className="hamburger-area">
         <div className="user-info">
-          <img
-            className="user-img"
-            src={messageList[0].photo}
-            alt="user image"
-          />
-          <p> {messageList[0].userName} </p>
-          <p> {messageList[0].email}</p>
+          <div className="img-user-info">
+            <img className="user-img" src={userData.image} alt="user image" />
+            <BiUserPlus className="add-icon" />
+          </div>
+          <p> {`${userData.firstName} ${userData.lastName}`}</p>
+          <p> {`@${userData.username}`}</p>
+          <div className="followers-count">
+            <p> {`${userData.age} Following`}</p>
+            <p> {`${userData.height} Follower`}</p>
+          </div>
         </div>
         <ul className="HamburgerMenu-list">
           <li>
@@ -49,6 +61,7 @@ const HamburgerMenu = ({ isActive, setIsActive }) => {
         </ul>
       </div>
       <div className="modal" onClick={() => setIsActive((prev) => !prev)}></div>
+      {console.log(userData)}
     </div>
   );
 };
