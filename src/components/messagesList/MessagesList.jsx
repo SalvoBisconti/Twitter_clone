@@ -12,10 +12,10 @@ import { useState, useEffect } from "react";
 import { GiFeather } from "react-icons/gi";
 import { useRef } from "react";
 
-const MessagesList = ({ setNavShow }) => {
+const MessagesList = ({ setNavShow, inputValue }) => {
   const [messageList, setMessageList] = useState([]);
   const scrollRef = useRef(null);
-
+  console.log(inputValue);
   const scrollBar = () => {
     if (scrollRef.current.scrollTop >= 300) {
       setNavShow(true);
@@ -30,9 +30,13 @@ const MessagesList = ({ setNavShow }) => {
       .then(({ posts }) => setMessageList(posts));
   }, []);
 
+  const filteredMsgList = messageList.filter((msg) =>
+    msg.body.includes(inputValue)
+  );
+
   return (
     <div className="MessagesList" ref={scrollRef} onScroll={scrollBar}>
-      {messageList.map((msg) => (
+      {filteredMsgList.map((msg) => (
         <MessageItem msgData={msg} key={msg.id} />
       ))}
       <div className="new-post">

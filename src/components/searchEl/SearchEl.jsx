@@ -1,9 +1,14 @@
 import "./index.css";
 
-const SearchEl = ({ text }) => {
+const SearchEl = ({ text, setInputValue }) => {
   return (
     <div className="SearchEl">
-      <input type="text" placeholder={text} className="search-area" />
+      <input
+        type="text"
+        placeholder={text}
+        className="search-area"
+        onChange={(e) => setInputValue(e.target.value)}
+      />
     </div>
   );
 };

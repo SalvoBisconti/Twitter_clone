@@ -1,12 +1,15 @@
 import DesktopHeader from "../desktopHeader";
 import MessagesList from "../messagesList";
 import "./index.css";
+import { useState } from "react";
 
 const Content = ({ setNavShow }) => {
+  const [inputValue, setInputValue] = useState("");
+
   return (
     <div className="Content">
-      <DesktopHeader />
-      <MessagesList setNavShow={setNavShow} />
+      <DesktopHeader setInputValue={setInputValue} />
+      <MessagesList setNavShow={setNavShow} inputValue={inputValue} />
     </div>
   );
 };

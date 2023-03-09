@@ -5,7 +5,7 @@ import { HiOutlineSparkles } from "react-icons/hi";
 import { BsCardImage, BsBarChartLine } from "react-icons/bs";
 import { AiOutlineFileGif } from "react-icons/ai";
 
-const DesktopHeader = () => {
+const DesktopHeader = ({ setInputValue }) => {
   return (
     <div className="DesktopHeader">
       <div className="title-sec">
@@ -13,14 +13,13 @@ const DesktopHeader = () => {
         <HiOutlineSparkles className="sparkling" />
       </div>
       <div className="search-sec">
-        {/* <div className="input-area"> */}
         <img
           src="https://img.icons8.com/color/512/user-female-circle.png"
           alt="user"
           className="user-search-area"
         />
-        <SearchEl text="What's happening?" />
-        {/* </div> */}
+        <SearchEl text="What's happening?" setInputValue={setInputValue} />
+
         <div className="icons">
           <BsCardImage />
           <AiOutlineFileGif />
