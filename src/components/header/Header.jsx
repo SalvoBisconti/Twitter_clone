@@ -4,6 +4,7 @@
 // Mentre quando siritorna alla posizione di partenza l'header ritorna
 // alla sua posizione naturale.
 // L'usestate che controlla questa funzionalità è creato in App.jsx
+// Tutto ciò è relativo alla modalità mobile
 
 import "./index.css";
 import SubHeader from "../subHeader";
