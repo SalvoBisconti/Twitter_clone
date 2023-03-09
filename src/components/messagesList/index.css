@@ -1,7 +1,8 @@
 .MessagesList {
-  height: 100%;
+  height: 100vh;
   width: 100vw;
   margin-bottom: 60px;
+  overflow: scroll;
 }
 
 .new-post {
@@ -22,10 +23,14 @@
   font-size: 1.9rem;
   color: white;
 }
+.MessagesList::-webkit-scrollbar {
+  display: none;
+}
 @media screen and (min-width: 800px) {
   .MessagesList {
     width: 45vw;
     margin-bottom: 0;
+    height: 100%;
   }
   .new-post {
     display: none;

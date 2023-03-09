@@ -1,11 +1,19 @@
+// ESERCIZIO 09-03-2023
+// Attraverso l'utilizzo dell'hock useRef allo scroll l'header si
+// sposta in alto
+// Mentre quando siritorna alla posizione di partenza l'header ritorna
+// alla sua posizione naturale.
+// L'usestate che controlla questa funzionalità è creato in app.jsx
+
 import "./index.css";
+import SubHeader from "../subHeader";
 import { AiOutlineTwitter, AiOutlineMenu } from "react-icons/ai";
 import { HiOutlineSparkles } from "react-icons/hi";
 
-const Header = ({ setIsActive }) => {
+const Header = ({ setIsActive, navShow }) => {
   return (
     <div className="Header">
-      <ul className="header-list">
+      <ul className={`header-list ${navShow && "header-out"}`}>
         <li>
           <AiOutlineMenu onClick={() => setIsActive((prev) => !prev)} />
         </li>
@@ -16,6 +24,7 @@ const Header = ({ setIsActive }) => {
           <HiOutlineSparkles />
         </li>
       </ul>
+      <SubHeader />
     </div>
   );
 };

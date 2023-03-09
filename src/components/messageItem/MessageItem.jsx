@@ -1,9 +1,15 @@
 import "./index.css";
 import { useState, useEffect } from "react";
+import { FaRegComment } from "react-icons/fa";
+import { BiRepost } from "react-icons/bi";
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+import { IoIosStats } from "react-icons/io";
+import { FiShare } from "react-icons/fi";
 
 const MessageItem = ({ msgData }) => {
   const { body, userId } = msgData;
   const [userData, setUserData] = useState([]);
+  const [likesCount, setLikesCount] = useState(Math.floor(Math.random() * 50));
 
   useEffect(() => {
     fetch(`https://dummyjson.com/users/${userId}`)
@@ -26,22 +32,18 @@ const MessageItem = ({ msgData }) => {
         <p className="msg-text">{body}</p>
 
         <div className="msg-icons">
-          <img
-            src="https://img.icons8.com/ios/512/speech-bubble--v1.png"
-            alt="comment"
-          />
-          <img
-            src="https://img.icons8.com/external-inkubators-basic-outline-inkubators/512/external-repost-user-interface-inkubators-basic-outline-inkubators.png"
-            alt="retweet"
-          />
-          <img
-            src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/512/external-love-social-media-ui-tanah-basah-basic-outline-tanah-basah.png"
-            alt="like"
-          />
-          <img
-            src="https://img.icons8.com/material-sharp/512/share-rounded.png"
-            alt="share"
-          />
+          <FaRegComment />
+          <BiRepost />
+          <div className="likes">
+            <AiOutlineHeart
+              onClick={() => {
+                setLikesCount(likesCount + 1);
+              }}
+            />
+            <p>{likesCount}</p>
+          </div>
+          <IoIosStats />
+          <FiShare />
         </div>
       </div>
     </div>

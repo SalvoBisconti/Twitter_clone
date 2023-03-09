@@ -1,14 +1,12 @@
 import DesktopHeader from "../desktopHeader";
 import MessagesList from "../messagesList";
-import SubHeader from "../subHeader";
 import "./index.css";
 
-const Content = () => {
+const Content = ({ setNavShow }) => {
   return (
     <div className="Content">
       <DesktopHeader />
-      <SubHeader />
-      <MessagesList />
+      <MessagesList setNavShow={setNavShow} />
     </div>
   );
 };

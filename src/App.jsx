@@ -10,13 +10,14 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [isActive, setIsActive] = useState(false);
+  const [navShow, setNavShow] = useState(false);
 
   return (
     <div className="App">
       <SideMenu />
       <HamburgerMenu isActive={isActive} setIsActive={setIsActive} />
-      <Header setIsActive={setIsActive} />
-      <Content />
+      <Header setIsActive={setIsActive} navShow={navShow} />
+      <Content setNavShow={setNavShow} />
       <BottomMenu />
       <TrendList />
     </div>

@@ -26,15 +26,18 @@
 .msg-icons {
   display: flex;
   justify-content: space-between;
-  margin-right: 20px;
+  align-items: start;
   margin-bottom: 10px;
-}
-.msg-icons img {
-  width: 22px;
-  cursor: pointer;
+  font-size: 1.3rem;
 }
 
-/* .msg-text {
-  color: red;
-  width: 90%;
-} */
+.likes {
+  display: flex;
+  align-items: start;
+  gap: 5px;
+}
+
+.likes p {
+  font-size: 1rem;
+  margin-top: 2px;
+}
