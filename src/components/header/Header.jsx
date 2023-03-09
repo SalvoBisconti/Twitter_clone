@@ -3,7 +3,7 @@
 // sposta in alto
 // Mentre quando siritorna alla posizione di partenza l'header ritorna
 // alla sua posizione naturale.
-// L'usestate che controlla questa funzionalità è creato in app.jsx
+// L'usestate che controlla questa funzionalità è creato in App.jsx
 
 import "./index.css";
 import SubHeader from "../subHeader";
