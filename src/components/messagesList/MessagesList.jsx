@@ -5,7 +5,6 @@
 // alla sua posizione naturale.
 // L'usestate che controlla questa funzionalità è creato in App.jsx.
 // Tutto ciò è relativo alla modalità mobile
-
 import "./index.css";
 import MessageItem from "../messageItem";
 import { useState, useEffect } from "react";
