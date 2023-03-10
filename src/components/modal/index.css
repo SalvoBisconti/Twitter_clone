@@ -37,13 +37,14 @@
   outline: none;
   text-align: start;
   padding: 10px;
-
+  font-size: 1.3rem;
   border: none;
 }
 
 #modal-input::placeholder {
   position: absolute;
   top: 10px;
+  font-size: 1.3rem;
 }
 .icons-modal {
   display: flex;
