@@ -13,8 +13,8 @@ import { HiOutlineSparkles } from "react-icons/hi";
 
 const Header = ({ setIsActive, navShow }) => {
   return (
-    <div className="Header">
-      <ul className={`header-list ${navShow && "header-out"}`}>
+    <div className={`Header ${navShow && "header-out"}`}>
+      <ul className={`header-list`}>
         <li>
           <AiOutlineMenu onClick={() => setIsActive((prev) => !prev)} />
         </li>

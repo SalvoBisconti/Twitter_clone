@@ -3,6 +3,7 @@
   width: 100vw;
   margin-bottom: 60px;
   overflow: scroll;
+  transition: all 0.35s ease;
 }
 
 .new-post {

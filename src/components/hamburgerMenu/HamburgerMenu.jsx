@@ -61,7 +61,6 @@ const HamburgerMenu = ({ isActive, setIsActive }) => {
         </ul>
       </div>
       <div className="modal" onClick={() => setIsActive((prev) => !prev)}></div>
-      {console.log(userData)}
     </div>
   );
 };

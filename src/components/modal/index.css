@@ -1,0 +1,80 @@
+.Modal {
+  position: absolute;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  z-index: 5;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px 10px 20px;
+  border-bottom: 1px solid rgb(207, 207, 207);
+}
+
+.back-button {
+  font-size: 1.3rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.send-button {
+  font-size: 1.3rem;
+  border: none;
+  color: white;
+  border-radius: 24px;
+  padding: 8px 16px;
+  background-color: rgb(29, 161, 242);
+  cursor: pointer;
+}
+
+#modal-input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  text-align: start;
+  padding: 10px;
+
+  border: none;
+}
+
+#modal-input::placeholder {
+  position: absolute;
+  top: 10px;
+}
+.icons-modal {
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 0;
+  height: 35px;
+  width: 100%;
+  font-size: 1.8rem;
+  color: rgb(29, 161, 242);
+  padding: 10px 5px;
+  border-top: 1px solid rgb(207, 207, 207);
+}
+
+@media screen and (min-width: 800px) {
+  .Modal {
+    position: fixed;
+    bottom: 30%;
+    left: 18%;
+    height: 300px;
+    width: 60vw;
+    background-color: white;
+    z-index: 5;
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 24px;
+  }
+  #modal-input {
+    height: 200px;
+    width: 96%;
+    outline: none;
+    text-align: start;
+    padding: 10px;
+  }
+}

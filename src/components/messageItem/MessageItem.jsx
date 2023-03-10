@@ -6,19 +6,26 @@ import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { IoIosStats } from "react-icons/io";
 import { FiShare } from "react-icons/fi";
 
-const MessageItem = ({ msgData }) => {
+const MessageItem = ({ msgData, setModal, id, setIdMessage }) => {
   const { body, userId } = msgData;
   const [userData, setUserData] = useState([]);
   const [likesCount, setLikesCount] = useState(Math.floor(Math.random() * 50));
+  const [likesClass, setLikesClass] = useState(true);
 
   useEffect(() => {
     fetch(`https://dummyjson.com/users/${userId}`)
       .then((res) => res.json())
       .then((data) => setUserData(data));
   }, []);
-
+  const likeOn = () => {
+    likesClass ? setLikesCount(likesCount + 1) : setLikesCount(likesCount - 1);
+  };
+  const onRepostClick = () => {
+    setModal(true);
+    setIdMessage(id);
+  };
   return (
-    <div className="MessageItem">
+    <div className="MessageItem" id={id}>
       <div className="img-sec">
         <img
           src={userData.image}
@@ -33,13 +40,26 @@ const MessageItem = ({ msgData }) => {
 
         <div className="msg-icons">
           <FaRegComment />
-          <BiRepost />
+          <BiRepost className="repost" onClick={onRepostClick} />
           <div className="likes">
-            <AiOutlineHeart
-              onClick={() => {
-                setLikesCount(likesCount + 1);
-              }}
-            />
+            {likesClass ? (
+              <AiOutlineHeart
+                className="like-no"
+                onClick={() => {
+                  likeOn();
+                  setLikesClass((prev) => !prev);
+                }}
+              />
+            ) : (
+              <AiFillHeart
+                className="like-on"
+                onClick={() => {
+                  likeOn();
+                  setLikesClass((prev) => !prev);
+                }}
+              />
+            )}
+
             <p>{likesCount}</p>
           </div>
           <IoIosStats />

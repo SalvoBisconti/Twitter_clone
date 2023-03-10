@@ -4,6 +4,7 @@
   margin-right: 7%;
   margin-top: 10px;
   display: none;
+  transition: all 0.35s ease;
 }
 
 .trending-main {

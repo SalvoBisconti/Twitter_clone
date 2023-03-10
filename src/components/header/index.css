@@ -5,16 +5,20 @@
   justify-content: space-between;
   padding: 10px 20px;
   margin: 0;
+  transition: all 0.5s ease;
 }
-
+.header-list li {
+  cursor: pointer;
+}
 .header-list {
   font-size: 1.9rem;
   cursor: pointer;
   color: rgb(29, 161, 242);
-  transition: all 0.5s ease;
+
+  background-color: white;
 }
 .header-out {
-  transform: translateY(-100px);
+  transform: translateY(-70px);
   transition: all 0.7s ease;
   height: 0;
 }

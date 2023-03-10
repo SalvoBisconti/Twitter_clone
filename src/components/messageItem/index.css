@@ -35,9 +35,27 @@
   display: flex;
   align-items: start;
   gap: 5px;
+  cursor: pointer;
 }
 
 .likes p {
   font-size: 1rem;
   margin-top: 2px;
+}
+
+.like-on {
+  color: red;
+}
+.like-on:active,
+.like-no:active {
+  transform: scale(1.2);
+  transition: all 0.35s ease;
+}
+
+.repost {
+  cursor: pointer;
+}
+.repost:active {
+  transform: scale(1.2);
+  transition: all 0.35s ease;
 }
