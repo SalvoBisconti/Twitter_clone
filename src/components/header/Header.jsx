@@ -1,11 +1,3 @@
-// ESERCIZIO 09-03-2023
-// Attraverso l'utilizzo dell'hock useRef allo scroll l'header si
-// sposta in alto
-// Mentre quando siritorna alla posizione di partenza l'header ritorna
-// alla sua posizione naturale.
-// L'usestate che controlla questa funzionalità è creato in App.jsx
-// Tutto ciò è relativo alla modalità mobile
-
 import "./index.css";
 import SubHeader from "../subHeader";
 import { AiOutlineTwitter, AiOutlineMenu } from "react-icons/ai";

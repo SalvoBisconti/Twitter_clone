@@ -1,7 +1,3 @@
-// FIXME: ESERCIZIO 10-03-2023
-// Cliccando sull'icona del repost parte una chiamata PUT che modifica il
-// testo del messaggio
-
 import "./index.css";
 import MessageItem from "../messageItem";
 import { useState, useEffect } from "react";
